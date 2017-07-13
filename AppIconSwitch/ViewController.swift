@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         if UIApplication.shared.supportsAlternateIcons {
             print("I can do it")
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +40,7 @@ class ViewController: UIViewController {
     }
 
     private func switchIcon(name: String?) {
+        //note that the name corresponds to the key in the Info.plist CFBundleAlternateIcons dictionary
         UIApplication.shared.setAlternateIconName(name) { (error: Error?) in
             guard let error = error else {
                 print("success")
